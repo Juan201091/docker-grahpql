@@ -34,7 +34,7 @@ jobs:
          
     - name: Push Docker Image
       run: |
-        docker push juan2010901/graph-ql:0.0.1 .
+        docker push juan2010901/graph-ql:0.0.1
         
         
        
