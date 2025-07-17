@@ -27,6 +27,17 @@ jobs:
         echo "Inciando Login"
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
         echo "Fin del login"
+
+    - name: Build Image
+      run: |
+         docker build -t juan2010901/graph-ql:0.0.1 .
+         
+    - name: Push Docker Image
+      run: |
+        docker push juan2010901/graph-ql:0.0.1 .
+        
+        
+       
           
       
       # ocker build . --file Dockerfile --tag my-image-name:$(date +%s)
